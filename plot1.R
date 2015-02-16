@@ -11,8 +11,7 @@ DF2$Date <- as.Date(DF2$Date,"%d/%m/%Y")
 # convert Time column to Time tupe of POSIXlt
 DF2$Time <- strptime(DF2$Time,"%H:%M:%S")
 #plotting histogram for Global Active Power
-hist(DF$Global_active_power,col="red",xlab="Global Active Power (kilowatts)")
-title(main="Global Active Power")
+hist(DF$Global_active_power,col="red",xlab="Global Active Power (kilowatts)", main="Gloabl Active Power")
 # create PNG version of histogram
-dev.copy(png,file="plot1.png")
+dev.copy(png,file="plot1.png", height=480, width=480)
 dev.off()
